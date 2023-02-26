@@ -20,7 +20,7 @@ class Author(Model):
 
 class Quote(Model):
     tags = ManyToManyField(Tag)
-    text = CharField(max_length=1000, null=False)
+    text = TextField(max_length=1000, null=False)
     author = ForeignKey(Author, on_delete=CASCADE)
 
     def __str__(self):
